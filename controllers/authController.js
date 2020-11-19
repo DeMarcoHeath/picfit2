@@ -122,7 +122,8 @@ module.exports.loginAuthentication = async (req, res, next) => {
 module.exports.register = async (req, res, next) => {
   const { username, fullName, email, password } = req.body;
   let user = null;
-  let confirmationToken = null;
+  const access_token = null;
+  let confirmationToken = access_token;
 
   const usernameError = validateUsername(username);
   if (usernameError) return res.status(400).send({ error: usernameError });

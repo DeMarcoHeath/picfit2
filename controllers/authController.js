@@ -149,7 +149,7 @@ module.exports.register = async (req, res, next) => {
         email: user.email,
         username: user.username,
       },
-      token: jwt.encode({ id: user._id }, process.env.JWT_SECRET),
+      token: jwt.decode({ id: user._id }, process.env.JWT_SECRET),
     });
   } catch (err) {
     next(err);

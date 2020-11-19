@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const compression = require("compression");
 const path = require("path");
 const socketio = require("socket.io");
-const jwt = require("jwt-simple");
+//const jwt = require("jwt-simple");
 
 const apiRouter = require("./routes");
 
